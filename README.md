@@ -21,7 +21,10 @@ Our goal is to provide high-quality resources and solutions that empower develop
 * Open-source developer utilities.
 * Community-driven documentation and guides.
 * Free resources for web deployment and infrastructure management.
-`* 📚 [Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for GCP, Oracle Cloud, and more.`
+
+## 📚 Documentation & Guides
+* [☁️ Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for Oracle Cloud SSH recovery and GCP AMD provisioning.
+* [🏢 Enterprise Cloud Provisioning Notes](enterprise-cloud-provisioning.md) - Setup workflows for SAP BTP Pay-As-You-Go, AWS cost optimization, and GCP resource allocation.
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
