@@ -21,6 +21,7 @@ Our goal is to provide high-quality resources and solutions that empower develop
 * Open-source developer utilities.
 * Community-driven documentation and guides.
 * Free resources for web deployment and infrastructure management.
+`* 📚 [Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for GCP, Oracle Cloud, and more.`
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
