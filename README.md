@@ -3,38 +3,42 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+![Cloudflare Workers](https://img.shields.io/badge/Deployed_on-Cloudflare_Workers-F38020.svg?logo=cloudflare)
+![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC.svg?logo=terraform)
 
-Welcome to the official GitHub repository for **cncentre**. We are dedicated to building accessible, efficient, and open tools for the developer community. 
+Welcome to the official GitHub repository for **cncentre**. We are a non-profit open-source initiative dedicated to building accessible, secure, and efficient cloud infrastructure solutions for the global developer community.
 
 🌐 **Official Website:** [https://c1z.com](https://c1z.com)  
 📧 **Contact:** admin@c1z.com
 
-## 🌟 Mission (我们的使命)
-Our goal is to provide high-quality resources and solutions that empower developers and creators, fostering a collaborative and open internet environment.
+## 🛡️ Non-Profit & Open Source Declaration (非营利与开源声明)
+**This project is a strictly non-profit, volunteer-driven open-source initiative.** * **Zero Monetization:** We do not generate revenue, run commercial advertisements, or sell user data. 
+* **100% Open Source:** All core code, CI/CD pipelines, IaC configurations, and documentation hosted here are released under the MIT License.
+* **Community First:** We rely heavily on community contributions and programs designed for public-good projects (like Cloudflare Project Alexandria) to maintain our global infrastructure and deliver high-speed resources to developers.
 
-## 🤝 Non-Profit & Open Source Declaration (非营利与开源声明)
-**This project is a 100% non-profit, volunteer-driven open-source initiative.** * **No Monetization:** We do not generate revenue, run ads, or sell data. The project operates entirely free of charge for the public good.
-* **Open Source:** All core code, documentation, and tools hosted here are released under the MIT License, ensuring they remain free and open forever.
-* **Community First:** We rely on community contributions, open-source infrastructure support, and volunteer efforts to maintain and scale our services (such as c1z.com).
+## ⚙️ Core Architecture & Multi-Cloud Code (核心架构与多云代码)
+We focus on modern edge-computing, automated provisioning, and multi-cloud routing. Here are our core operational utilities:
 
-## 🛠 Features (项目特性)
-* Open-source developer utilities.
-* Community-driven documentation and guides.
-* Free resources for web deployment and infrastructure management.
+### Infrastructure as Code (IaC) & Automation
+* 🌍 **[Terraform Cloudflare Routing](infra/terraform/cloudflare-routing.tf)**: Enterprise-grade Terraform scripts to manage Cloudflare DNS, WAF rules, and traffic routing to multiple cloud backends (e.g., GCP, AWS).
+* 🚀 **[Server Initialization Scripts](scripts/init-server.sh)**: Automated bash scripts to quickly bootstrap Debian/Ubuntu cloud instances, configuring Docker, TCP BBR for Egress optimization, and Swap memory.
+* 🔄 **[CI/CD Pipelines](.github/workflows/deploy-worker.yml)**: Automated GitHub Actions workflows for seamless edge deployments.
 
-## ⚙️ Core Architecture & Code (核心架构与代码)
-We focus on modern edge-computing and automated provisioning. Here are our core operational utilities:
-
-* 🛡️ **[Edge Security Router](src/workers/security-router.js)** A highly optimized Cloudflare Worker script deployed at the edge. It automatically mitigates basic bot traffic, injects strict HTTP security headers, and routes API requests before they even hit our origin servers.
-* 🚀 **[Server Initialization Scripts](scripts/init-server.sh)** Automated bash scripts designed to quickly bootstrap Debian/Ubuntu cloud instances (e.g., GCP, Oracle Cloud). It automatically configures Docker environments, enables TCP BBR for Egress optimization, and provisions Swap memory for low-resource nodes.
-* 🔄 **[CI/CD Pipelines](.github/workflows/deploy-worker.yml)** Automated GitHub Actions workflows that seamlessly deploy our edge code to the Cloudflare global network upon every main branch commit.
+### Edge Computing & Security (Cloudflare Workers)
+* ☁️ **[Multi-Cloud Storage Proxy](src/workers/cloud-storage-proxy.js)**: A proxy Worker designed to cache objects from Azure Blob or AWS S3 directly at the Cloudflare Edge, eliminating exorbitant cloud egress costs.
+* 🛡️ **[Edge Security Router](src/workers/security-router.js)**: A highly optimized Worker that mitigates basic bot traffic and injects strict HTTP security headers.
+* 🤖 **[Turnstile API Validator](src/security/turnstile-validator.js)**: Middleware to validate Cloudflare Turnstile tokens, ensuring only human traffic reaches our expensive backend APIs (e.g., SAP BTP).
 
 ## 📚 Documentation & Best Practices (技术文档与最佳实践)
 Sharing operational knowledge is a core part of our mission. Check out our open-source guides:
 
-* 🌟 **[Cloudflare Integration Guide](cloudflare-integration-guide.md)** - Detailed architecture decisions on why we utilize Cloudflare R2 for zero-egress storage, Workers for serverless APIs, and advanced WAF for community protection.
-* ☁️ **[Cloud Operations & Troubleshooting](cloud-ops-guide.md)** - Practical recovery steps for Oracle Cloud SSH key loss and rapid GCP AMD (`n2d`) instance provisioning.
+* 🌟 **[Cloudflare Integration Guide](cloudflare-integration-guide.md)** - Detailed architecture decisions on why we utilize Cloudflare R2, Workers, and WAF.
+* ☁️ **[Cloud Operations & Troubleshooting](cloud-ops-guide.md)** - Practical recovery steps for Oracle Cloud SSH key loss and rapid GCP AMD instance provisioning.
 * 🏢 **[Enterprise Cloud Provisioning](enterprise-cloud-provisioning.md)** - Setup workflows and cost-optimization strategies for SAP BTP Pay-As-You-Go, AWS Graviton instances, and GCP networking.
 
+## 🤝 Contributing
+We welcome contributions from the community! Whether it's a pull request to optimize our bash scripts, expanding our documentation, or improving our IaC logic, your help is appreciated. 
+
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+Copyright (c) 2026 cncentre (c1z.com)
