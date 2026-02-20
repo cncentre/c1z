@@ -19,6 +19,11 @@ Welcome to the official GitHub repository for **cncentre**. We are a non-profit 
 ## ⚙️ Core Architecture & Multi-Cloud Code (核心架构与多云代码)
 We focus on modern edge-computing, automated provisioning, and multi-cloud routing. Here are our core operational utilities:
 
+### Edge Computing, Security & AI (边缘计算、安全与 AI)
+* 🤖 **[Edge AI DevOps Assistant](src/workers/ai-log-analyzer.js)**: A serverless troubleshooting tool powered by **Cloudflare Workers AI**. It processes raw server error logs (from Docker, Nginx, or cloud instances) at the edge and utilizes open-source LLMs (like Llama 3) to instantly generate actionable fix recommendations for our community developers.
+* ☁️ **[Multi-Cloud Storage Proxy](src/workers/cloud-storage-proxy.js)**: A proxy Worker designed to cache objects from Azure Blob or AWS S3 directly at the Cloudflare Edge.
+* 🛡️ **[Edge Security Router](src/workers/security-router.js)**: Mitigates basic bot traffic and injects strict HTTP security headers.
+
 ### Infrastructure as Code (IaC) & Automation
 * 🌍 **[Terraform Cloudflare Routing](infra/terraform/cloudflare-routing.tf)**: Enterprise-grade Terraform scripts to manage Cloudflare DNS, WAF rules, and traffic routing to multiple cloud backends (e.g., GCP, AWS).
 * 🚀 **[Server Initialization Scripts](scripts/init-server.sh)**: Automated bash scripts to quickly bootstrap Debian/Ubuntu cloud instances, configuring Docker, TCP BBR for Egress optimization, and Swap memory.
