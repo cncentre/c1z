@@ -23,8 +23,9 @@ Our goal is to provide high-quality resources and solutions that empower develop
 * Free resources for web deployment and infrastructure management.
 
 ## 📚 Documentation & Guides
-* [☁️ Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for Oracle Cloud SSH recovery and GCP AMD provisioning.
-* [🏢 Enterprise Cloud Provisioning Notes](enterprise-cloud-provisioning.md) - Setup workflows for SAP BTP Pay-As-You-Go, AWS cost optimization, and GCP resource allocation.
+* 🌟 **[Cloudflare Integration & Best Practices for Open Source](cloudflare-integration-guide.md)** - Why we use Cloudflare R2, Workers, and WAF to scale our community.
+* [☁️ Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for Oracle Cloud and GCP.
+* [🏢 Enterprise Cloud Provisioning Notes](enterprise-cloud-provisioning.md) - Setup workflows for SAP BTP and AWS.
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
