@@ -22,10 +22,19 @@ Our goal is to provide high-quality resources and solutions that empower develop
 * Community-driven documentation and guides.
 * Free resources for web deployment and infrastructure management.
 
-## 📚 Documentation & Guides
-* 🌟 **[Cloudflare Integration & Best Practices for Open Source](cloudflare-integration-guide.md)** - Why we use Cloudflare R2, Workers, and WAF to scale our community.
-* [☁️ Cloud Operations & Troubleshooting Guide](cloud-ops-guide.md) - Practical solutions for Oracle Cloud and GCP.
-* [🏢 Enterprise Cloud Provisioning Notes](enterprise-cloud-provisioning.md) - Setup workflows for SAP BTP and AWS.
+## ⚙️ Core Architecture & Code (核心架构与代码)
+We focus on modern edge-computing and automated provisioning. Here are our core operational utilities:
+
+* 🛡️ **[Edge Security Router](src/workers/security-router.js)** A highly optimized Cloudflare Worker script deployed at the edge. It automatically mitigates basic bot traffic, injects strict HTTP security headers, and routes API requests before they even hit our origin servers.
+* 🚀 **[Server Initialization Scripts](scripts/init-server.sh)** Automated bash scripts designed to quickly bootstrap Debian/Ubuntu cloud instances (e.g., GCP, Oracle Cloud). It automatically configures Docker environments, enables TCP BBR for Egress optimization, and provisions Swap memory for low-resource nodes.
+* 🔄 **[CI/CD Pipelines](.github/workflows/deploy-worker.yml)** Automated GitHub Actions workflows that seamlessly deploy our edge code to the Cloudflare global network upon every main branch commit.
+
+## 📚 Documentation & Best Practices (技术文档与最佳实践)
+Sharing operational knowledge is a core part of our mission. Check out our open-source guides:
+
+* 🌟 **[Cloudflare Integration Guide](cloudflare-integration-guide.md)** - Detailed architecture decisions on why we utilize Cloudflare R2 for zero-egress storage, Workers for serverless APIs, and advanced WAF for community protection.
+* ☁️ **[Cloud Operations & Troubleshooting](cloud-ops-guide.md)** - Practical recovery steps for Oracle Cloud SSH key loss and rapid GCP AMD (`n2d`) instance provisioning.
+* 🏢 **[Enterprise Cloud Provisioning](enterprise-cloud-provisioning.md)** - Setup workflows and cost-optimization strategies for SAP BTP Pay-As-You-Go, AWS Graviton instances, and GCP networking.
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
