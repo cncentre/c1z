@@ -8,7 +8,7 @@
 
 Welcome to the official GitHub repository for **cncentre**. We are a non-profit open-source initiative dedicated to building accessible, secure, and efficient cloud infrastructure solutions for the global developer community.
 
-🌐 **Official Website:** [https://c1z.com/index.php](https://c1z.com/index.php)  
+🌐 **Official Website:** [https://c1z.com](https://c1z.com)  
 📧 **Contact:** admin@c1z.com
 
 ## 🛡️ Non-Profit & Open Source Declaration (非营利与开源声明)
